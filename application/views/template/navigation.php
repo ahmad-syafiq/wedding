@@ -34,7 +34,7 @@
             <a href="#"><img src="/templates/markups-eventoz/flogo.png"></a>
           </div>
           <div class="mu-hero-featured-content">
-            <h1 style="margin: 20px 0">Undangan Pernikahan</h1>
+            <h1 style="margin: 95px 0 0; font-family: 'Great Vibes', cursive; font-size: 45px">Our Wedding</h1>
             <p class="mu-event-date-line">
               <i class="fa fa-calendar"></i> 02 Januari 2018
             </p>

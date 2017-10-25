@@ -1,5 +1,111 @@
 <main role="main">
-	<section id="mu-about">
+	<section>
+		<div class="row">
+			<div class="col-xs-6 img-responsive text-right" style="margin-top:10px; padding: 30px; border-right: solid #ddd 1px;">
+				<div class="avatar avatar_left">
+					<span><img class="img-responsive" src="/templates/markups-eventoz/assets/images/line.png"></span>
+					<img class="img-circle" src="/templates/markups-eventoz/assets/images/male.png">
+				</div>
+			</div>
+			<div class="col-xs-6 img-responsive" style="margin-top:10px; padding: 30px; border-left: solid #ddd 1px;">
+				<div class="avatar">
+					<span><img class="img-responsive" src="/templates/markups-eventoz/assets/images/line.png"></span>
+					<img class="img-circle" src="/templates/markups-eventoz/assets/images/female.png">
+				</div>
+			</div>
+		</div>
+	</section>
+
+<style type="text/css">
+.avatar span{
+	position: absolute;
+	z-index: -1;
+	left: 30px;
+	top: 20px;
+}
+.avatar_left span{
+	top: 28px;
+	left: 359px;
+}
+
+.avatar::before {
+	content: "";
+	position: absolute;
+	bottom: 22px;
+	left: 0;
+	right: 259px;
+	margin: 0px auto;
+	background-color: #f07677;
+	height: 150px;
+	-webkit-border-radius: 0px 0px 150px 150px;
+	-moz-border-radius: 0px 0px 150px 150px;
+	border-radius: 0px 0px 150px 150px;
+	width: 275px;
+	z-index: -1;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.avatar_left::before {
+	right: -420px;
+}
+
+.avatar::after {
+  content: "";
+	position: absolute;
+	top: 27px;
+	left: -403px;
+	right: 0px;
+	margin: 0px auto;
+	background-color: #f07677;
+	height: 150px;
+	-webkit-border-radius: 150px 150px 0px 0px;
+	-moz-border-radius: 150px 150px 0px 0px;
+	border-radius: 150px 150px 0px 0px;
+	width: 275px;
+	z-index: -1;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.avatar_left::after {
+	left: 269px;
+}
+
+@media only screen and (max-width: 780px) {}
+@media(max-width: 767px) {
+	.avatar::before {
+		bottom: 0px;
+		right: -25px;
+		height: 63px;
+		width: 115px;
+		top: 77px;
+	}
+	.avatar::after {
+		top: 36px;
+		left: -25px;
+		height: 63px;
+		width: 115px;
+	}
+	.avatar span{
+		left: 31px;
+		top: 31px;
+		-webkit-transform: rotate(6deg);
+		-ms-transform: rotate(6deg);
+		-o-transform: rotate(6deg);
+		transform: rotate(6deg);
+	}
+	.avatar span img{
+		height: 110px
+	}
+}
+
+
+</style>
+
+	<section id="mu-about" style="padding: 10px">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

@@ -14,6 +14,7 @@
 		<link href="/templates/markups-eventoz/assets/css/slick.css" rel="stylesheet">
     <link id="switcher" href="/templates/markups-eventoz/assets/css/theme-color/default-theme.css" rel="stylesheet">
     <link href="/templates/markups-eventoz/style.css" rel="stylesheet">
+    <link href="/templates/markups-eventoz/fonts.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
