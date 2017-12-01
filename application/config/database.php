@@ -76,9 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'          => '',
 	'hostname'     => 'localhost',
-	'username'     => 'root',
-	'password'     => '1',
-	'database'     => 'ci_wedding',
+	'username'     => 'syafiq_db',
+	'password'     => '4df4b1f1b6ea11fe0e2a4d364a1e49d2',
+	'database'     => 'syafiq_wd',
 	'dbdriver'     => 'mysqli',
 	'dbprefix'     => '',
 	'pconnect'     => TRUE,
@@ -94,3 +94,10 @@ $db['default'] = array(
 	'failover'     => array(),
 	'save_queries' => TRUE
 );
+
+/*
+CREATE USER 'syafiq_db'@'localhost' IDENTIFIED BY '4df4b1f1b6ea11fe0e2a4d364a1e49d2';
+CREATE DATABASE `syafiq_wd`;
+GRANT ALL PRIVILEGES ON `syafiq_db` . * TO 'syafiq_db'@'localhost';
+FLUSH PRIVILEGES;
+*/

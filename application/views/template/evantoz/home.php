@@ -1,18 +1,20 @@
 <main role="main">
 	<section>
 		<div class="row">
-			<div class="col-xs-6 img-responsive text-right" style="margin-top:10px; padding: 30px; border-right: solid #ddd 1px;">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3 col-xs-6 img-responsive text-right" style="margin-top:10px; padding: 30px; border-right: solid #ddd 1px;">
 				<div class="avatar avatar_left">
 					<span><img class="img-responsive" src="/templates/markups-eventoz/assets/images/line.png"></span>
 					<img class="img-circle" src="/templates/markups-eventoz/assets/images/male.png">
 				</div>
 			</div>
-			<div class="col-xs-6 img-responsive" style="margin-top:10px; padding: 30px; border-left: solid #ddd 1px;">
+			<div class="col-sm-3 col-xs-6 img-responsive" style="margin-top:10px; padding: 30px; border-left: solid #ddd 1px;">
 				<div class="avatar">
 					<span><img class="img-responsive" src="/templates/markups-eventoz/assets/images/line.png"></span>
 					<img class="img-circle" src="/templates/markups-eventoz/assets/images/female.png">
 				</div>
 			</div>
+			<div class="col-sm-3"></div>
 		</div>
 	</section>
 
