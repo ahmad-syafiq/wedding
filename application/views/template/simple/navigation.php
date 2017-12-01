@@ -1,6 +1,7 @@
     <div class="row" style="margin: 0">
       <div class="col-xs-12" style="padding: 0">
-        <img src="/templates/simple/images/Yuli_Fendy2.jpg" class="img-responsive" style="width: 100%">
+        <img src="/templates/simple/images/Yuli_Fendy2.jpg" class="img-responsive hidden-xs hidden-sm" style="width: 100%">
+        <img src="/templates/simple/images/Yuli_Fendy4.jpg" class="img-responsive visible-xs visible-sm" style="width: 100%">
         <div class="wrapper">
           <div class="message hidden-xs hidden-sm" >
             <div class="col-xs-7">
