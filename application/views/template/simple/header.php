@@ -9,6 +9,7 @@
 		<!-- Bootstrap CSS -->
 		<link href="/templates/simple/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/templates/simple/css/font-awesome.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href="/templates/simple/css/style.css" rel="stylesheet">
 
 		<link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
