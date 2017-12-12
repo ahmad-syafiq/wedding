@@ -5,14 +5,59 @@
     <!-- Tab panes -->
     <div class="tab-content mu-schedule-content">
       <div class="tab-pane fade mu-event-timeline in active" id="first-day">
-        <ul style="background-color: rgba(255, 255, 255, 0.7); padding: 45px 20px; width: 75%;margin-left: auto;margin-right: auto;">
+        <ul>
           <li>
             <div class="mu-single-event">
-              <p class="mu-event-time">9.00 AM</p>
-              <h3>Breakfast</h3>
+              <p class="mu-event-time">Senin 01 Januari 2018</p>
+              <div>
+                <b>Acara : </b>
+                <h3 style="margin-top: 0">Resepsi/Undangan</h3>
+              </div>
+              <div style="padding: 10px 0">
+                <b>Waktu : </b>
+                <h3 style="margin-top: 0">12.00 WIB - 15.00 WIB</h3>
+              </div>
+              <div>
+                <b>Tempat : </b>
+                <h3 style="margin-top: 0">Desa Kedungsari RT.05 RW.05 Kec. Gebog Kab. Kudus</h3>
+              </div>
             </div>
           </li>
           <li>
+            <div class="mu-single-event">
+              <p class="mu-event-time">Selasa 02 Januari 2018</p>
+              <div>
+                <b>Acara : </b>
+                <h3 style="margin-top: 0">Akad Nikah dan Prosesi Pernikahan</h3>
+              </div>
+              <div style="padding: 10px 0">
+                <b>Waktu : </b>
+                <h3 style="margin-top: 0">09.00 WIB - selesai</h3>
+              </div>
+              <div>
+                <b>Tempat : </b>
+                <h3 style="margin-top: 0">Desa Megawon RT.02 RW.01 Kec. Jati Kab. Kudus</h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mu-single-event">
+              <p class="mu-event-time">Selasa 02 Januari 2018</p>
+              <div>
+                <b>Acara : </b>
+                <h3 style="margin-top: 0">Resepsi/Undangan</h3>
+              </div>
+              <div style="padding: 10px 0">
+                <b>Waktu : </b>
+                <h3 style="margin-top: 0">12.00 WIB - 15.00 WIB</h3>
+              </div>
+              <div>
+                <b>Tempat : </b>
+                <h3 style="margin-top: 0">Desa Megawon RT.02 RW.01 Kec. Jati Kab. Kudus</h3>
+              </div>
+            </div>
+          </li>
+          <!-- <li>
             <div class="mu-single-event">
               <img src="/templates/simple/images/thumb1.jpg" alt="event speaker">
               <p class="mu-event-time">10.00 AM</p>
@@ -35,23 +80,18 @@
               <h3>Keynote on UX &amp; UI Design</h3>
               <span>By Ned Stark</span>
             </div>
-          </li>
-          <li>
-            <div class="mu-single-event">
-              <p class="mu-event-time">1.00 PM</p>
-              <h3>The End</h3>
-            </div>
-          </li>
+          </li> -->
         </ul>
       </div>
-
     </div>
-
   </div>
-
 </div>
 
 <style type="text/css">
+
+.mu-event-timeline ul{
+    background-color: rgba(255, 255, 255, 0.7); padding: 45px 20px; width: 75%;margin-left: auto;margin-right: auto;
+}
     .mu-event-timeline ul li {
     list-style-type: none;
     position: relative;
@@ -154,6 +194,80 @@
     margin-left: 15px;
 }
 
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .mu-event-timeline ul{
+        width: 90%
+    }
+    .mu-event-timeline ul li {
+        margin-left: 10px;
+    }
+
+    .mu-event-timeline ul li .mu-single-event,
+    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event,
+    .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
+        left: 30px;
+        width: 100%;
+    }
+
+
+        .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event {
+        left: 30px;
+        text-align: left;
+    }
+
+
+    .mu-event-timeline ul li .mu-single-event, 
+    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event, 
+    .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
+        left: 30px;
+        width: 200px;
+    }
+
+    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event::before {
+        right: auto;
+        left: -16px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #fff transparent transparent;
+    }
+
+    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event img {
+        float: left;
+        margin-right: 15px;
+        margin-left: 0;
+    }
+
+
+    .mu-event-timeline ul li .mu-single-event h3 {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .mu-event-timeline ul li .mu-single-event, 
+    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event, 
+    .mu-event-timeline ul li:nth-child(2n) .mu-single-event {
+        left: 30px;
+        width: 280px;
+    }
+
+    .mu-event-timeline ul li:nth-child(2n+1) .mu-single-event {
+    left: -320px;
+}
+
+    .mu-event-timeline ul{
+        width: 90%
+    }
+
+}
 
   </style>
 
