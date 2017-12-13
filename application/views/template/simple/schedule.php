@@ -19,7 +19,7 @@
               </div>
               <div>
                 <b>Tempat : </b>
-                <h3 style="margin-top: 0">Desa Kedungsari RT.05 RW.05 Kec. Gebog Kab. Kudus</h3>
+                <h3 style="margin-top: 0">Kediaman Mempelai Pria (Desa Kedungsari RT.05 RW.05 Kec. Gebog Kab. Kudus)</h3>
               </div>
             </div>
           </li>
@@ -36,7 +36,7 @@
               </div>
               <div>
                 <b>Tempat : </b>
-                <h3 style="margin-top: 0">Desa Megawon RT.02 RW.01 Kec. Jati Kab. Kudus</h3>
+                <h3 style="margin-top: 0">Kediaman Mempelai Wanita (Desa Megawon RT.02 RW.01 Kec. Jati Kab. Kudus)</h3>
               </div>
             </div>
           </li>
@@ -53,44 +53,27 @@
               </div>
               <div>
                 <b>Tempat : </b>
-                <h3 style="margin-top: 0">Desa Megawon RT.02 RW.01 Kec. Jati Kab. Kudus</h3>
+                <h3 style="margin-top: 0">Kediaman Mempelai Wanita (Desa Megawon RT.02 RW.01 Kec. Jati Kab. Kudus)</h3>
               </div>
             </div>
           </li>
-          <!-- <li>
-            <div class="mu-single-event">
-              <img src="/templates/simple/images/thumb1.jpg" alt="event speaker">
-              <p class="mu-event-time">10.00 AM</p>
-              <h3>Advanced SVG Animations</h3>
-              <span>By Karl Groves</span>
-            </div>
-          </li>
-          <li>
-            <div class="mu-single-event">
-              <img src="/templates/simple/images/thumb1.jpg" alt="event speaker">
-              <p class="mu-event-time">11.00 AM</p>
-              <h3>Presenting Work with Confidence</h3>
-              <span>By Sarah Dransner</span>
-            </div>
-          </li>
-          <li>
-            <div class="mu-single-event">
-              <img src="/templates/simple/images/thumb1.jpg" alt="event speaker">
-              <p class="mu-event-time">12.00 AM</p>
-              <h3>Keynote on UX &amp; UI Design</h3>
-              <span>By Ned Stark</span>
-            </div>
-          </li> -->
+
+          <div style="margin-top: 20px">
+            <img style="width: 100%; padding: 10px;" src="/templates/simple/images/IMG_3216.JPG" class="img-responsive" alt="Image">
+          </div>        
         </ul>
       </div>
     </div>
   </div>
 </div>
 
+<div class="container" style="background-color: rgba(255, 255, 255, 0.7);margin-bottom: 10px;">
+</div>
+
 <style type="text/css">
 
 .mu-event-timeline ul{
-    background-color: rgba(255, 255, 255, 0.7); padding: 45px 20px; width: 75%;margin-left: auto;margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.7); padding: 20px; width: 75%;margin-left: auto;margin-right: auto;
 }
     .mu-event-timeline ul li {
     list-style-type: none;

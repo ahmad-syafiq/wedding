@@ -39,7 +39,7 @@
           <a href="/location">Denah Lokasi</a>
         </li>
         <li class="dropdown dropdown-large">
-          <a href="#">Ucapan Selamat</a>
+          <a href="/congrats">Ucapan Selamat</a>
         </li>
       </ul>
     </div>
