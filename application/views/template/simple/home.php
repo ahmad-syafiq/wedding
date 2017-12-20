@@ -26,58 +26,89 @@
           'name'    => 'Ahmad Syafiq',
           'image'   => 'https://lh6.googleusercontent.com/-7WTTUk5lnXE/AAAAAAAAAAI/AAAAAAAAAF0/6rSDB_qFCHo/photo.jpg',
           'content' => 'Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test '
-        ), array(
+        )/*, array(
           'email'   => '4.syafiq@gmail.com',
           'name'    => 'Ahmad Syafiq 2',
           'image'   => 'https://lh3.googleusercontent.com/-xWqEGOIB6Jo/AAAAAAAAAAI/AAAAAAAAAKY/-rSLnk7XCMo/photo.jpg',
-          'content' => 'Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal '
-        )
+          'content' => 'Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal Jajal '
+        )*/
       );
 
-    ?>
+      // $r_data = array();
 
+
+      // pr($r_list, __FILE__.':'.__LINE__);
+
+      $email = 'ahmad.syafiq.ti.umk@gmail.com';
+
+    ?>
 		<div class="row">
 			<div class="col-xs-12">
-        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-          <ol class="carousel-indicators">
-            <?php
-            foreach ($r_data as $key => $data)
-            {
-              $cls_active = $key == 0 ? ' active' : '';
-              ?>
-                <li data-target="#quote-carousel" data-slide-to="<?php $key ?>" class="<?php echo $cls_active ?>"></li>
+        <?php
+        if (!empty($r_list))
+        {
+          ?>
+          <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+            <ol class="carousel-indicators">
               <?php
-            }
-            ?>
-          </ol>
-          
-          <div class="carousel-inner"> 
-            <?php
-            foreach ($r_data as $key => $data)
-            {
-              $cls_active = $key == 0 ? ' active' : '';
+              reset($r_list);
+              $first_key = key($r_list);
+              foreach ($r_list as $key => $data)
+              {
+                $cls_active = $key == $first_key ? ' active' : '';
+                ?>
+                  <li data-target="#quote-carousel" data-slide-to="<?php $key ?>" class="<?php echo $cls_active ?>"></li>
+                <?php
+              }
               ?>
-              <div class="item<?php echo $cls_active?>">
-                <blockquote>
-                  <div class="row">
-                    <div class="col-sm-3 text-center">
-                      <img class="img-circle" src="<?php echo $data['image']?>" style="width: 100px;height:100px;">
-                    </div>
-                    <div class="col-sm-9">
-                      <p style="padding-right: 15px"><?php echo $data['content'] ?></p>
-                      <small><?php echo $data['name'] ?></small>
-                    </div>
-                  </div>
-                </blockquote>
-              </div>
+            </ol>
+            
+            <div class="carousel-inner"> 
               <?php
-            }
-            ?>          
+              foreach ($r_list as $key => $data)
+              {
+                $cls_active = $key == $first_key ? ' active' : '';
+                $email = $data['data']['email'];
+                $a = @file_get_contents('http://picasaweb.google.com/data/entry/api/user/'.$email.'?alt=json');
+                if (!empty($a))
+                {
+                  $a   = json_decode($a,1);
+                  $img = $a['entry']['gphoto$thumbnail']['$t'];
+                }else{
+                  $img = 'http://www.astr.ro/img/icon-user-default.jpg';
+                }
+                ?>
+                <div class="item<?php echo $cls_active?>">
+                  <blockquote>
+                    <div class="row">
+                      <div class="col-sm-3 text-center">
+                        <img src="<?php echo $img ?>">
+                      </div>
+                      <div class="col-sm-9">
+                        <p style="padding-right: 15px"><?php echo implode('. ', $data['congrats']) ?></p>
+                        <small><?php echo $data['data']['name'] ?></small>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <?php
+              }
+              ?>          
+            </div>
+            
+            <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+          </div> 
+          <?php
+        }else{
+          ?>
+          <div style="margin: 20px 0;">
+            <h4>Daftar Ucapan Selamat Masih Kosong.</h4>
+            <a href="/congrats" class="btn btn-primary">Kirim Ucapan </a>
           </div>
-          
-          <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-          <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
-        </div>                          
+          <?php
+        }
+        ?>
 			</div>
 		</div>
 	</div>
@@ -133,8 +164,9 @@
 }
 #quote-carousel img
 {
-  width: 250px;
-  height: 100px
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 /* End carousel */
 
@@ -191,14 +223,3 @@
     }
 }
 </style>
-
-<script type="text/javascript">
-	// When the DOM is ready, run this function
-$(document).ready(function() {
-  //Set the carousel options
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 4000,
-  });
-});
-</script>

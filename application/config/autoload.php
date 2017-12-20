@@ -135,4 +135,4 @@ $autoload['language'] = array();
 $autoload['model'] = array();
 
 
-$autoload['helper'] = array('function');
+$autoload['helper'] = array('function', 'html', 'form', 'url');
