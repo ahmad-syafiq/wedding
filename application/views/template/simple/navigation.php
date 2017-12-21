@@ -10,7 +10,7 @@
         </div>
         <div class="col-xs-5">
           <div class="counter_area">
-            <div id="counter" data-dates="2018-01-02 10:00:00"></div>
+            <div id="counter" data-dates="2018-01-01 12:00:00"></div>
           </div>
         </div>
       </div>
