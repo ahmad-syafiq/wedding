@@ -57,6 +57,19 @@
               </div>
             </div>
           </li>
+          <li>
+            <div class="mu-single-event">
+              <p class="mu-event-time">Selasa 02 Januari 2018</p>
+              <div>
+                <b>Acara : </b>
+                <h3 style="margin-top: 0">Mempelai Wanita Diantar Ke Kediaman Mempelai Pria (Desa Kedungsari RT.05 RW.05 Kec. Gebog Kab. Kudus)</h3>
+              </div>
+              <div style="padding: 10px 0">
+                <b>Waktu : </b>
+                <h3 style="margin-top: 0">19.00 WIB</h3>
+              </div>
+            </div>
+          </li>
 
           <div style="margin-top: 20px">
             <img style="width: 100%; padding: 10px;" src="/templates/simple/images/IMG_3216.JPG" class="img-responsive" alt="Image">
