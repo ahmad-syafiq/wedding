@@ -19,21 +19,31 @@ class congrats_model extends CI_Model{
     $email      = $this->input->post('email');
     $r_congrats = $this->input->post('congrats_data');
 
-    $data = array(
-              'name'  => $name,
-              'email' => $email                    
-            );
-    $this->db->insert('congrats_list', $data);    
-    $insert_id = $this->db->insert_id();
+    $sql    = "SELECT 1 FROM congrats_list WHERE email = '$email' LIMIT 1";
+    $query  = $this->db->query($sql);
+    $result = $query->result();
 
-    foreach ($r_congrats as $congrats_id)
+    if (empty($result))
     {
-      $data1 = array(
-                'list_id'     => $insert_id,
-                'congrats_id' => $congrats_id,
+      $data = array(
+                'name'  => $name,
+                'email' => $email                    
               );
-      $this->db->insert('congrats_data',$data1);  
+      $this->db->insert('congrats_list', $data);    
+      $insert_id = $this->db->insert_id();
+
+      foreach ($r_congrats as $congrats_id)
+      {
+        $data1 = array(
+                  'list_id'     => $insert_id,
+                  'congrats_id' => $congrats_id,
+                );
+        $this->db->insert('congrats_data',$data1);  
+      }
+    }else{
+      $data = array('err'=>1,'msg'=>'Email Sudah Pernah Dipakai.');
     }
+
     return $data;
   }
 

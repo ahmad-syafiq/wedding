@@ -77,7 +77,7 @@
 			<div class="panel-heading">
 				<h3 class="panel-title">Daftar Ucapan Selamat Yang Telah Dikiriman.</h3>
 			</div>
-			<div class="panel-body" style="overflow: auto;">
+			<div class="panel-body" style="overflow: auto; max-height: 500px; height: auto;">
 				<?php
 				if (!empty($r_list))
 				{

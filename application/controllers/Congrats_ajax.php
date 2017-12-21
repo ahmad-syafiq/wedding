@@ -35,7 +35,14 @@ class Congrats_ajax extends CI_Controller {
   {
     $this->load->model('congrats_model');        
     $a = $this->congrats_model->congrats_add();
-    return output_json(array('status' => 'ok', 'url'=>'/congrats?success=1', $a));
+
+    if (empty($a['err']))
+    {
+      $output = array('status' => 'ok', 'url'=>'/congrats?success=1', $a);
+    }else{
+      $output = array('msg' => 'Email Sudah Pernah Dipakai. Mohon Gunakan Email Yang Lain.');
+    }
+    return output_json($output);
   }
 }
 

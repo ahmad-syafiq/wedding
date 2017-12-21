@@ -45,9 +45,17 @@ $(document).ready(function($){
   });
 
 	$(".congrats_btn").click(function(){
-		$(".placeholder").remove();
-		var a = '<div class="r_congrats" data-id="'+ $(this).data("id") +'">'+ $(this).html() +'</div>';
-		$(".congrats_data").append(a);
+		if ($(this).hasClass("btn-primary")) 
+		{
+			$(this).removeClass("btn-primary").addClass("btn-danger");
+			$(".placeholder").remove();
+			var a = '<div class="r_congrats" data-id="'+ $(this).data("id") +'">'+ $(this).html() +'</div>';
+			$(".congrats_data").append(a);
+		}else{
+			$(this).removeClass("btn-danger").addClass("btn-primary");
+			$('.r_congrats[data-id="'+$(this).data("id")+'"]').remove();
+		}
+
 	});
 
 	$(".congrats_send").click(function(){
@@ -77,7 +85,7 @@ $(document).ready(function($){
 							if (result.status == 'ok') {
 								window.location.href = result.url
 							}else{
-								console.log('error sending congrats...');
+								alert(result.msg);
 							}
 						}
 					});
